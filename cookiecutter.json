@@ -2,7 +2,7 @@
 	"full_name": "Adam Stevenson",
 	"email": "adam.stevenson@saint-gobain.com",
 	"article_title": "Super Article",
-	"article_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
+	"article_slug": "{{ cookiecutter.article_title.lower().replace(' ', '_') }}",
 	"article_short_description": "An article that will blow your mind",
                 "year": "2016",
                 "author_list":"people"
