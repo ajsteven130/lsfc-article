@@ -1,4 +1,5 @@
 all:
+	cd ./tex
 	pdflatex -file-line-error ./tex/{{cookiecutter.article_slug}}.tex
 	bibtex ./tex/{{cookiecutter.article_slug}}
 	bibtex ./tex/{{cookiecutter.article_slug}}	
