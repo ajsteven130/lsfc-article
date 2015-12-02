@@ -1,9 +1,9 @@
 {
 	"full_name": "Adam Stevenson",
 	"email": "adam.stevenson@saint-gobain.com",
-	"article_title": "Super Article",
+                 "article_title": "Super Article",
+                 "author_list":"{{cookiecutter.full_name}}",
 	"article_slug": "{{ cookiecutter.article_title.lower().replace(' ', '_') }}",
 	"article_short_description": "An article that will blow your mind",
-                "author_list":"{{cookiecutter.full_name}}"
                 "proposed_journal": "JACerS, JECerS, Scientific Reports"
 }
