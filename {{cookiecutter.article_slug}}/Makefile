@@ -5,7 +5,7 @@ all:
 	cd ./tex && pdflatex -file-line-error {{cookiecutter.article_slug}}.tex
 	cd ./tex && bibtex {{cookiecutter.article_slug}}
 	cd ./tex && pdflatex -file-line-error {{cookiecutter.article_slug}}.tex
-	cd ./tex && cygstart {{cookiecutter.article}}.pdf
+	cd ./tex && cygstart {{cookiecutter.article_slug}}.pdf
 
 make install:
 	conda update conda
