@@ -1,0 +1,132 @@
+\documentclass[12pt, a4paper, titlepage]{article}
+
+%PACKAGES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{makeidx} %Package to make an index 
+\usepackage[latin1]{inputenc} %imports character database
+\usepackage[english]{babel} %Manages language specific typography
+\usepackage[T1]{fontenc} %Allows changing the font
+\usepackage{charter} %Changes the font from default "latin modern" to "Charter"
+\usepackage{graphicx} %To insert pictures and visual stuff (base for includegraphics command)
+\usepackage{textcomp} %Package for certain text symbols
+\usepackage{wrapfig} %Allows figures to have text wrapped around them
+\usepackage{amsmath} %For equations
+\usepackage{amssymb} %For math symbols
+\usepackage[version=3, arrows=pgf]{mhchem} %Easy writing of chemical formulas and equation
+\usepackage{layout} %For layout parameters
+\usepackage[a4paper, bottom=3cm]{geometry} %Layout shape
+\usepackage[font=scriptsize]{caption} %For adding captions
+\usepackage[font=footnotesize]{subcaption} %Adding subcaptions
+\usepackage{setspace} %Setting space between lines
+\usepackage{gensymb} %Generates symbols as celsius, degrees etc.
+\usepackage{titlesec} %Package to change title fonts etc.
+\usepackage{float} %Introduces the float environnement for figures, graphs, equations...
+\usepackage{pdfpages} %Adding pdf pages
+\usepackage{fancyhdr} %Header and footer
+\usepackage{hyperref} %Enables typesetting of hyperlinks
+ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%change the default font for all the tables in the document
+\let\oldtabular\tabular
+\renewcommand{\tabular}{\footnotesize\oldtabular}
+
+%\singlespacing
+%\onehalfspacing
+\doublespacing
+\setlength{\parskip}{0.5em}
+\setlength{\parindent}{0em}
+
+\begin{document}
+
+\title{{{cookiecutter.article_title}}}
+\author{{{cookiecutter.author_list}} }
+\date{\today}
+\maketitle
+
+\begin{abstract}
+
+{{cookiecutter.article_short_description}}
+\end{abstract}
+
+\tableofcontents
+\pagebreak
+
+\section{Introduction}
+
+
+
+
+\section{Experimental procedure}
+
+
+
+\section{Results and discussion}
+
+
+\begin{table}[H]
+\centering
+\resizebox{\textwidth}{!}{\begin{tabular}{c c c c c c}    
+    \hline
+    Sample & Solid loading(wt.\%) & Porosity(\%) & Mean ${d_{p}}_{Hg}$($\mu$m) & Mean ${d_{p}}_{IA}$($\mu$m) & Mean wall thickness($\mu$m) \\ \hline \hline
+    a & 50\% & 69,5\% & 19,1 & 20,0 $\pm$ 1,2 & 11,2 $\pm$ 1,1 \\
+    b & 55\% & 64,2\% & 17,5 & 17,7 $\pm$ 1,2 & 14,7 $\pm$ 1,1 \\
+    c & 60\% & 60,4\% & 14,2 & 13,9 $\pm$ 1,4 & 15,8 $\pm$ 1,1 \\
+    d & 65\% & 52,5\% & 8,3 & 13,7 $\pm$ 1,5 & 19,1 $\pm$ 1,1 \\
+    \hline
+    e & 50\% & 70,4\% & 5,4 & 4,7 $\pm$ 0,3 & 3,6 $\pm$ 0,3 \\
+    f & 55\% & 65,2\% & 4,3 & 4,3 $\pm$ 0,3 & 3,9 $\pm$ 0,3 \\
+    g & 60\% & 60,7\% & 3,9 & 4,1 $\pm$ 0,3 & - $\pm$ 0,3 \\
+    h & 65\% & 51,5\% & 2,9 & 3,1 $\pm$ 0,3 & 3,0 $\pm$ 0,3\\
+    \hline
+\end{tabular}}	
+\caption{Sample Table referencing Fig. \ref{fig:samplefig}}
+\label{tab:TailoringPoro}
+\end{table} 
+
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{Figures/samplefig.png}
+	\caption{Sample caption}
+	\label{fig:samplefig}
+\end{figure}
+
+ 
+
+
+\begin{figure}[H]
+\makebox[\textwidth][c]{
+	\centering
+	\begin{subfigure}[b]{0.5\textwidth}
+		\includegraphics[width=\textwidth]{Figures/samplefig.png}
+			\caption{}
+			\label{fig:compositesample1}
+	\end{subfigure}
+	\quad
+	\begin{subfigure}[b]{0.5\textwidth}
+			\includegraphics[width=\textwidth]{Figures/samplefig.png}
+			\caption{}
+			\label{fig:compositesample2}
+		\end{subfigure}
+	}
+		\caption{example of a composite figure}
+\end{figure}     
+
+
+\pagebreak
+
+
+
+\section{Conclusions}
+
+
+
+\pagebreak
+
+\bibliographystyle{unsrt}
+\bibliography{{{cookiecutter.article_slug}}}
+\end{document}
+
+

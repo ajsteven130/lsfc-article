@@ -1,0 +1,7 @@
+name: {{cookiecutter.article_slug}}-env
+
+dependencies:
+- python
+- numpy
+- matplotlib
+- pandas
