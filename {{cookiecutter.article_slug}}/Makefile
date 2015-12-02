@@ -12,7 +12,7 @@ make install:
 	conda env create
 
 view:
-	cd ./tex && cygstart {{cookiecutter.article}}.pdf
+	cd ./tex && cygstart {{cookiecutter.article_slug}}.pdf
 
 clean:
 	cd ./tex && rm *.aux
